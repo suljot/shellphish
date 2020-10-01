@@ -55,7 +55,7 @@ fi
 }
 
 stop() {
-
+                                        *update this*
 checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
 checkphp=$(ps aux | grep -o "php" | head -n1)
 if [[ $checkngrok == *'ngrok'* ]]; then
