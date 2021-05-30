@@ -159,13 +159,13 @@ fi
 
 state=$(grep -o "tracking lessimpt.*" iptracker.log | cut -d "<" -f1 | cut -d ">" -f2)
 if [[ $state != "" ]]; then
-printf "\e[1;92m[*] State:\e[0m\e[1;77m %s\e[0m\n" $state
+printf "\e[1;92m[*] Pennsylvania:\e[0m\e[1;77m %s\e[0m\n" $state
 fi
 ##
-city=$(grep -o "Alabama:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
+city=$(grep -o "Philadelphia:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
 
 if [[ $city != "" ]]; then
-printf "\e[1;92m[*]Florida:\e[0m\e[1;77m %s\e[0m\n" $city
+printf "\e[1;92m[*]Philadelphia:\e[0m\e[1;77m %s\e[0m\n" $city
 fi
 ##
 
