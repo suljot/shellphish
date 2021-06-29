@@ -272,7 +272,7 @@ sleep 1
 done 
 
 }
-banner
+banner 
 dependencies
 menu
 
